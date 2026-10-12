@@ -396,6 +396,11 @@ export type InternalAction = Action & {
   metadata?: {
     [key: string]: unknown;
   };
+  /**
+   * fire-engine, executeJavascript only: run the script at the device's real
+   * window height instead of the tall window the page is held in after load.
+   */
+  realViewport?: boolean;
 };
 
 const actionsSchema = z

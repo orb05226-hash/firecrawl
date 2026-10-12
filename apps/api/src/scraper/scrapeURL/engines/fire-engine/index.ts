@@ -425,6 +425,8 @@ export async function scrapeURLWithFireEngineChromeCDP(
             {
               type: "executeJavascript" as const,
               script: getBrandingScript(),
+              // The scan measures where things sit on the first screen.
+              realViewport: true,
               metadata: { __firecrawl_internal: true },
             },
           ]
